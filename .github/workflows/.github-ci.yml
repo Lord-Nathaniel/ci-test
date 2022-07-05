@@ -7,3 +7,8 @@ jobs:
       - uses: actions/checkout@v3
       - name: Compress to tgz
         run: tar cfz cafe.tgz index.html
+      - name: Archive compressed site
+        uses: actions/upload-artifact@v3
+        with:
+          name: compressed website
+          path: cafe.tgz
