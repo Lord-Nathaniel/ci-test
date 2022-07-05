@@ -1,0 +1,9 @@
+name: HTML CI
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Compress to tgz
+        run: tar cfz cafe.tgz index.html
