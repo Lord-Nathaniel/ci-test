@@ -1,0 +1,11 @@
+stages:
+  - build
+build:website:
+  stage: build
+  image: node:14
+  script:
+    - npm run build
+    - tar cfz website.tgz dist/
+  artifacts:
+    paths:
+      - cafe.tgz
